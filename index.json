@@ -59,12 +59,12 @@
         ]
       },
       {
-        "name": "Comix (PR test)",
-        "packageName": "eu.kanade.tachiyomi.extension.en.comixtest",
+        "name": "Comix",
+        "packageName": "eu.kanade.tachiyomi.extension.en.comix",
         "resources": {
-          "apkUrl": "https://github.com/manlyunicorn37/extensions-source/releases/download/6ea84ab/tachiyomi-en.comixtest-v1.6.55.apk",
+          "apkUrl": "https://github.com/manlyunicorn37/extensions-source/releases/download/ad463a1/tachiyomi-en.comix-v1.6.55.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/comix/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/manlyunicorn37/extensions-source/releases/download/6ea84ab/tachiyomi-en.comixtest-v1.6.55.jar"
+          "jarUrl": "https://github.com/manlyunicorn37/extensions-source/releases/download/ad463a1/tachiyomi-en.comix-v1.6.55.jar"
         },
         "extensionLib": "1.6",
         "versionCode": "106055",
@@ -72,8 +72,8 @@
         "contentWarning": "CONTENT_WARNING_MIXED",
         "sources": [
           {
-            "id": "1539624340810196614",
-            "name": "Comix (PR test)",
+            "id": "7537715367149829912",
+            "name": "Comix",
             "language": "en",
             "homeUrl": "https://comix.to",
             "mirrorUrls": [

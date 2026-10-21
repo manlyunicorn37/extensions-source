@@ -8,15 +8,5 @@
       "name": "tachiyomi-en.comix-v1.6.55.jar",
       "sha256": "5b214658c422fdcd3ba5187c9738541c84e22c6294b54477246c07102fc826f2"
     }
-  },
-  "eu.kanade.tachiyomi.extension.en.comixtest": {
-    "apk": {
-      "name": "tachiyomi-en.comixtest-v1.6.55.apk",
-      "sha256": "b6153b4663b1d519938974cbd07b455610ecf26576d777806bac5925fcbdacc6"
-    },
-    "jar": {
-      "name": "tachiyomi-en.comixtest-v1.6.55.jar",
-      "sha256": "ac872555d78d93be42fc5a3bbdaf02d5d58a8a9513637a386ea47f3a0dcc0fdc"
-    }
   }
 }
