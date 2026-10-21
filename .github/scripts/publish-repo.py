@@ -3,6 +3,7 @@ import hashlib
 import html
 import json
 import math
+import os
 import sys
 import time
 from pathlib import Path
@@ -189,9 +190,12 @@ final_extensions.extend(ext for ext, _, _, _, _ in new_extensions)
 final_extensions.sort(key=lambda ext: ext.packageName)
 
 index = index_pb2.Index(
-    name="Keiyoushi",
-    badgeLabel="KEI",
-    signingKey="9add655a78e96c4ec7a53ef89dccb557cb5d767489fac5e785d671a5a75d4da2",
+    name=os.environ.get("INDEX_NAME", "Keiyoushi"),
+    badgeLabel=os.environ.get("INDEX_BADGE", "KEI"),
+    signingKey=os.environ.get(
+        "INDEX_SIGNING_KEY",
+        "9add655a78e96c4ec7a53ef89dccb557cb5d767489fac5e785d671a5a75d4da2",
+    ),
     contact=index_pb2.Contact(
         website="https://keiyoushi.github.io",
         discord="https://discord.gg/3FbCpdKbdY",
