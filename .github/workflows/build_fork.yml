@@ -11,6 +11,10 @@ on:
       - 'src/en/comix/**'
       - '.github/workflows/build_fork.yml'
   workflow_dispatch:
+    inputs:
+      delete:
+        description: JSON list of modules to remove from the published index, e.g. ["en.comixtest"]
+        default: '[]'
 
 permissions: {}
 
@@ -96,11 +100,12 @@ jobs:
           PUBLISH_REPO: ${{ github.repository }}
           INDEX_NAME: ${{ github.repository_owner }} (PR test)
           INDEX_BADGE: TEST
+          DELETE: ${{ inputs.delete || '[]' }}
           # SHA-256 of the certificate in the SIGNING_KEY secret, must match repo.json
           INDEX_SIGNING_KEY: 52aaba8890554cbb49f7e6872f2956243e7193d0efd368b288b467f42102aa74
         run: |
           pip install protobuf
-          python -u ../main/.github/scripts/publish-repo.py "[]" "$GITHUB_SHA" "false"
+          python -u ../main/.github/scripts/publish-repo.py "$DELETE" "$GITHUB_SHA" "false"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
           git status
