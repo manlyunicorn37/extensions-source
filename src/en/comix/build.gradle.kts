@@ -5,7 +5,10 @@ plugins {
 }
 
 keiyoushi {
-    name = "Comix"
+    // Separate name (and so source ID) and package so this test build can be
+    // installed next to the official Comix extension
+    name = "Comix (PR test)"
+    pkgName = "en.comixtest"
     versionCode = 55
     contentWarning = ContentWarning.MIXED
     libVersion = "1.6"
